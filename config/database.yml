@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  #kindly replace your database user acces
+  username: postgres
+  #kindly replace your database password
+  password: 1234
+
+development:
+  <<: *default
+  database: blog-forum_development
+  username: postgres
+  #kindly replace your database password
+  password: 1234
+
+test:
+  <<: *default
+  database: blog-forum_test
+  username: postgres
+  #kindly replace your database password
+  password: 1234
